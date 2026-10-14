@@ -1044,7 +1044,9 @@
   <button class="btn small" id="importBtn" type="button">Import from file</button>
   <button class="btn small" id="backgroundBtn" type="button">🖼 Background</button>
   <button class="btn small" id="splashBtn" type="button">🎉 Opening picture</button>
-  <input type="file" id="importInput" accept="application/json,.json" hidden>
+  <!-- No file-type filter: phones often save backups (e.g. from WhatsApp) without the JSON label,
+       which would gray them out. The import checks the contents instead. -->
+  <input type="file" id="importInput" hidden>
   <span class="muted">Your data is saved in this browser.</span>
 </footer>
 
